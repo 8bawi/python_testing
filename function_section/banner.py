@@ -1,8 +1,9 @@
-def banner_text(text):
-    screen_width = 80
+def banner_text(text, width):
+    screen_width = width
+    
     if len(text) > screen_width - 4:
-        print("EEK!!")
-        print ("THE TEXT IS TOO LONG TO FIT IN THE SPECIFIED WIDTH")
+        raise ValueError("String {0} is larger than specified width {1}"
+                        .format(text,screen_width))
 
     if text == "*":
         print("*" * screen_width)
@@ -11,6 +12,6 @@ def banner_text(text):
         print(output_string)
 
 
-banner_text("*")
-banner_text("this is line")
-banner_text("*")
+banner_text("*",30)
+banner_text("this is line" , 3)
+banner_text("*",30)
