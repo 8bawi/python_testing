@@ -5,7 +5,8 @@ def get_integer(prompt):
     while True:
         temp = input(prompt)
         if temp.isnumeric():
-            return int(temp) # There is no need to write an else statement as if the "if" is true the function will return and other than that it will continue to do the print statement.
+            return int(temp) # There is no need to write an else statement as if the "if" is true the function will return and 
+                             # then it will continue to do the print statement.
         print("{0} is not a valid number.".format(temp))
 
 highest = 1000
